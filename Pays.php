@@ -4,12 +4,14 @@ class Pays{
     private string $_nom;
     private array $_equipes;
     private array $_joueurs;
+    
 
     public function __construct(string $nom)
     {
         $this->_nom = $nom;
         $this->_equipes = [];
         $this->_joueurs = [];
+       
     }
 
     //Getters et setters 
@@ -39,5 +41,6 @@ class Pays{
     public function setJoueurs(array $joueurs){
         $this->_joueurs = $joueurs;
     }
+    
 }
 ?>

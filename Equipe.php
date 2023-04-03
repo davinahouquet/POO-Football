@@ -5,7 +5,7 @@ class Equipe{
     private DateTime $_dateCreation;
     private array $_joueurs;
 
-    public function __construct(string $nom, DateTime $dateCreation)
+    public function __construct(string $nom, string $dateCreation)
     {
         $this->_nom = $nom;
         $this->_dateCreation = $dateCreation;
@@ -28,7 +28,7 @@ class Equipe{
 
     public function getDateCreation()
     {
-        return $this->_dateCreation;
+        return $this->_dateCreation->format('Y');
     }
 
     public function setDateCreation(DateTime $dateCreation)
