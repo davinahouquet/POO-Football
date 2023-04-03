@@ -12,5 +12,37 @@ class Equipe{
         $dateCreation = new DateTime();
         $this->_joueurs = [];
     }
+
+     //Getters et setters 
+     public function getNom()
+     {
+         return $this->_nom;
+     }
+ 
+     public function setNom(string $nom)
+     {
+         $this->_nom = $nom;
+ 
+         return $this;
+     }
+
+    public function getDateCreation()
+    {
+        return $this->_dateCreation;
+    }
+
+    public function setDateCreation(DateTime $dateCreation)
+    {
+        $this->_dateCreation = $dateCreation;
+
+        return $this;
+    }
+
+    public function getJoueurs(){
+        return $this->_joueurs = [];
+    }
+    public function setJoueurs(array $joueurs){
+        $this->_joueurs = $joueurs;
+    }
 }
 ?>
