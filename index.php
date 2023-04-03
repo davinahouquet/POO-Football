@@ -14,6 +14,8 @@ $espagne = new Pays ('Espagne');
 $angleterre = new Pays ('Angleterre');
 $italie = new Pays ('Italie');
 $bresil = new Pays ('Brésil');
+$portugal = new Pays ('Portugal');
+$argentine = new Pays ('Argentine');
 
 //Instanciation Equipes
 $psg = new Equipe('PSG', '1970');
@@ -22,9 +24,9 @@ $barca = new Equipe ('FC Barcelone', '1899');
 $Juventus = new Equipe ('Juventus', '1897');
 
 //Instanciation Joueurs
-$mbappe = new Joueur('Killian', 'Mbappe', '20-12-1998');
-$ronaldo = new Joueur ('Cristiano', 'Ronaldo', '05-02-1985');
-$messi = new Joueur ('Lionel', 'Messi', '24-06-1987');
-$neymar = new Joueur ('Neymar', 'Junior', '50-02-1992');
+$mbappe = new Joueur('Killian', 'Mbappe', '20-12-1998', $france);
+$ronaldo = new Joueur ('Cristiano', 'Ronaldo', '05-02-1985', $portugal);
+$messi = new Joueur ('Lionel', 'Messi', '24-06-1987', $argentine);
+$neymar = new Joueur ('Neymar', 'Junior', '50-02-1992', $bresil);
 
 ?>

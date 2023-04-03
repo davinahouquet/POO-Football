@@ -7,7 +7,7 @@ class Joueur{
     private string $_nationalite;
     private array $_equipes;
 
-    public function __construct(string $prenom, string $nom, string $dateNaissance, string $nationalite)
+    public function __construct(string $prenom, string $nom, string $dateNaissance, Pays $nationalite)
     {
         $this->_prenom = $prenom;
         $this->_nom = $nom;
@@ -53,12 +53,12 @@ class Joueur{
         return $this;
     }
 
-     public function getNationalite()
+     public function getNationalite() 
      {
          return $this->_nationalite;
      }
  
-     public function setNationalite(string $nationalite)
+     public function setNationalite(Pays $nationalite)
      {
          $this->_nationalite = $nationalite;
  
