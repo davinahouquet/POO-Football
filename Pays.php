@@ -31,8 +31,8 @@ class Pays{
         return $this->_equipes = [];
     }
 
-    public function setEquipes(array $equipes){
-        $this->_equipes = $equipes;
+    public function setEquipes(Equipe $equipes){
+        array_push($this->_equipes, $equipes);
     }
     public function getJoueurs(): array{
         return $this->_joueurs = [];
@@ -42,5 +42,16 @@ class Pays{
         $this->_joueurs = $joueurs;
     }
     
+    //Fonction pour liste toutes les équipes d'un pays
+    public function listerEquipePays(){
+        $result = $this.":<br>";
+        foreach($this->_equipes as $equipe){
+            $result .= "- $equipe.<br>";
+        }
+        return $result;
+    }
+    public function __toString(){
+        return $this->_nom;
+    }
 }
 ?>

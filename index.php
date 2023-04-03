@@ -18,10 +18,10 @@ $portugal = new Pays ('Portugal');
 $argentine = new Pays ('Argentine');
 
 //Instanciation Equipes
-$psg = new Equipe('PSG', '1970');
-$racing = new Equipe('Racing Club Strasbourg', '1906');
-$barca = new Equipe ('FC Barcelone', '1899');
-$Juventus = new Equipe ('Juventus', '1897');
+$psg = new Equipe('PSG', '1970', $france);
+$racing = new Equipe('Racing Club Strasbourg', '1906', $france);
+$barca = new Equipe ('FC Barcelone', '1899', $espagne);
+$Juventus = new Equipe ('Juventus', '1897', $italie);
 
 //Instanciation Joueurs
 $mbappe = new Joueur('Killian', 'Mbappe', '20-12-1998', $france);
@@ -29,4 +29,7 @@ $ronaldo = new Joueur ('Cristiano', 'Ronaldo', '05-02-1985', $portugal);
 $messi = new Joueur ('Lionel', 'Messi', '24-06-1987', $argentine);
 $neymar = new Joueur ('Neymar', 'Junior', '50-02-1992', $bresil);
 
+//Test des fonctions
+
+echo $france->listerEquipePays();
 ?>

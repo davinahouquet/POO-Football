@@ -3,8 +3,8 @@
 class Joueur{
     private string $_prenom;
     private string $_nom;
-    private DateTime $_dateNaissance;
-    private string $_nationalite;
+    private string $_dateNaissance;
+    private Pays $_nationalite;
     private array $_equipes;
 
     public function __construct(string $prenom, string $nom, string $dateNaissance, Pays $nationalite)
@@ -12,8 +12,7 @@ class Joueur{
         $this->_prenom = $prenom;
         $this->_nom = $nom;
         $this->_dateNaissance = $dateNaissance;
-        $dateNaissance = new DateTime();
-        $this->_nationalite = $nationalite;
+        // $dateNaissance = new DateTime();
         $this->_equipes = [];
     }
 
@@ -43,17 +42,17 @@ class Joueur{
 
      public function getDateNaissance()
     {
-        return $this->_dateNaissance->format('d-m-Y');
+        return $this->_dateNaissance;
     }
 
-    public function setDateNaissance(DateTime $dateNaissance)
+    public function setDateNaissance(string $dateNaissance)
     {
         $this->_dateNaissance = $dateNaissance;
 
         return $this;
     }
 
-     public function getNationalite() 
+     public function getNationalite(): Pays
      {
          return $this->_nationalite;
      }

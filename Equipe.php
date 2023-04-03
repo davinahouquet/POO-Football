@@ -2,15 +2,18 @@
 
 class Equipe{
     private string $_nom;
-    private DateTime $_dateCreation;
+    private string $_dateCreation;
     private array $_joueurs;
+    private Pays $_pays;
 
-    public function __construct(string $nom, string $dateCreation)
+    public function __construct(string $nom, string $dateCreation, Pays $pays)
     {
         $this->_nom = $nom;
         $this->_dateCreation = $dateCreation;
-        $dateCreation = new DateTime();
+        // $dateCreation = new DateTime();
         $this->_joueurs = [];
+        $this->_pays = $pays;
+        $this->_pays->setEquipes($this);
     }
 
      //Getters et setters 
@@ -28,10 +31,10 @@ class Equipe{
 
     public function getDateCreation()
     {
-        return $this->_dateCreation->format('Y');
+        return $this->_dateCreation;
     }
 
-    public function setDateCreation(DateTime $dateCreation)
+    public function setDateCreation(string $dateCreation)
     {
         $this->_dateCreation = $dateCreation;
 
@@ -44,5 +47,16 @@ class Equipe{
     public function setJoueurs(array $joueurs){
         $this->_joueurs = $joueurs;
     }
+   public function addJoueur(Joueur $joueurs){
+        return $joueurs->getPrenom()." " .$joueurs()->getNom();
+   }
+
+   public function getPays(){
+    return $this->_pays;
+   }
+   public function setPays(Pays $pays){
+    $this->_pays = $pays;
+   }
+
 }
 ?>
