@@ -42,16 +42,17 @@ class Pays{
         $this->_joueurs = $joueurs;
     }
     
+public function __toString(){
+    return $this->_nom;
+}
     //Fonction pour liste toutes les équipes d'un pays
-    public function listerEquipePays(){
+    public function listerEquipePays(): string {
         $result = $this.":<br>";
         foreach($this->_equipes as $equipe){
-            $result .= "- $equipe.<br>";
+            $result .= "- ".$equipe->getNom()."<br>";
         }
         return $result;
-    }
-    public function __toString(){
-        return $this->_nom;
-    }
+ 
+}
 }
 ?>

@@ -32,4 +32,10 @@ $neymar = new Joueur ('Neymar', 'Junior', '50-02-1992', $bresil);
 //Test des fonctions
 
 echo $france->listerEquipePays();
+echo $espagne->listerEquipePays();
+echo $angleterre->listerEquipePays();
+echo $italie->listerEquipePays();
+echo $bresil->listerEquipePays();
+echo $portugal->listerEquipePays();
+echo $argentine->listerEquipePays();
 ?>
