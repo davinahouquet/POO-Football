@@ -1,12 +1,26 @@
-<h1>POO Football</h1>
-
 <?php
-
 function chargerClasse($classe)
 {
     require $classe . '.php';
 }
 spl_autoload_register('chargerClasse');
+
+?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+
+<h1>POO Football</h1>
+
+<?php
 
 //Instanciation Pays
 $france = new Pays ('France');
@@ -37,7 +51,7 @@ $contratMbappePSG = new Contrat($mbappe, $psg, '2017');
 $contratMessiPSG = new Contrat($messi, $psg, '2021');
 $contratMessiFCB = new Contrat($messi, $fcb, '2004');
 $contratCRJuv = new Contrat($ronaldo, $juv, '2018');
-$contartCRReal = new Contrat($ronaldo, $real, '2009');
+$contratCRReal = new Contrat($ronaldo, $real, '2009');
 
 //Test des fonctions
 echo "Lister les équipe d'un pays : <br><br>";
