@@ -94,11 +94,11 @@ class Joueur{
 
     //Méthode pour lister toutes les équipes d'un joueur
     public function listerEquipesJoueur(){
-        $result = $this."<br>";
+        $result = "<div class='uk-child-width-1-3@m uk-grid-small uk-grid-match' uk-grid><div><div id='joueur' class='uk-card uk-card-default uk-card-body'>".$this."<br>";
         foreach($this->_contrats as $contrat){
-            $result .= " -".$contrat->getEquipe()." ".$contrat->getDateDebutSaison()."<br>";
+            $result .= "-".$contrat->getEquipe()." ".$contrat->getDateDebutSaison()."<br>";
         }
-        return $result;
+        return $result."</div></div></div><br>";
     }
 }
 ?>

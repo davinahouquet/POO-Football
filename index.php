@@ -69,10 +69,10 @@ echo $racing->listerJoueursEquipe();
 echo $fcb->listerJoueursEquipe();
 echo $juv->listerJoueursEquipe();
 
-echo "Lister les équipes d'un joueur : <br><br>";
+echo "Lister les équipes d'un joueur : <br>";
 echo $mbappe->listerEquipesJoueur();
 echo $ronaldo->listerEquipesJoueur();
 echo $messi->listerEquipesJoueur();
 echo $neymar->listerEquipesJoueur();
-
+;
 ?>

@@ -1,0 +1,19 @@
+#pays{
+    
+    color:white;
+    background-color: rgb(211, 56, 89);
+    border-radius: 5%;
+}
+
+#equipe{
+    color: black;
+    background-color: rgb(20, 220, 255);
+    border-radius: 5%;
+}
+
+#joueur{
+    color: white;
+    background-color: rgb(13, 110, 102);
+    border-radius: 5%;
+}
+
