@@ -72,11 +72,11 @@ public function setContrats(Contrat $contrat){
 
     //Méthode pour afficher les contrats d'une équipe
     public function listerJoueursEquipe():string{
-        $result = "<div class='uk-child-width-1-3@m uk-grid-small uk-grid-match' uk-grid><div><div id='equipe' class='uk-card uk-card-default uk-card-body'>".$this."<br>";
+        $result = "<div class='container'><div class='uk-child-width-1-3@m uk-grid-small uk-grid-match' uk-grid><div><div id='equipe' class='uk-card uk-card-default uk-card-body'>".$this."<br>";
         foreach($this->_contrats as $contrat){
             $result .= "-".$contrat->getJoueur()." ".$contrat->getJoueur()->getAgeJoueur()."<br>";
         }
-        return $result."</div></div></div><br>";
+        return $result."</div></div></div></div><br>";
     }
 }
 ?>

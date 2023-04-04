@@ -47,11 +47,11 @@ public function __toString(){
 }
     //Fonction pour liste toutes les équipes d'un pays
     public function listerEquipePays(): string {
-        $result = "<div class='uk-child-width-1-3@m uk-grid-small uk-grid-match' uk-grid><div><div id='pays' class='uk-card uk-card-default uk-card-body'>".$this."<br>";
+        $result = "<div class='container'><div class='uk-child-width-1-3@m uk-grid-small uk-grid-match' uk-grid><div><div id='pays' class='uk-card uk-card-default uk-card-body'>".$this."<br>";
         foreach($this->_equipes as $equipe){
             $result .= "-".$equipe->getNomEquipe()."<br>";
         }
-        return $result."</div></div></div><br>";
+        return $result."</div></div></div></div><br>";
  
 }
 }
