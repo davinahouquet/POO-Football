@@ -32,11 +32,11 @@ $portugal = new Pays ('Portugal');
 $argentine = new Pays ('Argentine');
 
 //Instanciation Equipes
-$psg = new Equipe('PSG', '1970', $france);
-$racing = new Equipe('Racing Club Strasbourg', '1906', $france);
-$fcb = new Equipe ('FC Barcelone', '1899', $espagne);
-$juv = new Equipe ('Juventus', '1897', $italie);
-$real = new Equipe ('Real Madrid', '1902', $espagne);
+$psg = new Equipe('PSG', 1970, $france);
+$racing = new Equipe('Racing Club Strasbourg', 1906, $france);
+$fcb = new Equipe ('FC Barcelone', 1899, $espagne);
+$juv = new Equipe ('Juventus', 1897, $italie);
+$real = new Equipe ('Real Madrid', 1902, $espagne);
 //Instanciation Joueurs
 $mbappe = new Joueur('Killian', 'Mbappe', '1998-12-20', $france);
 $ronaldo = new Joueur ('Cristiano', 'Ronaldo', '1985-02-05', $portugal);

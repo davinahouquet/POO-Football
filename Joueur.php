@@ -5,7 +5,6 @@ class Joueur{
     private string $_nom;
     private DateTime $_dateNaissance;
     private Pays $_nationalite;
-    private array $_equipes = [];
     private array $_contrats = [];
 
     public function __construct(string $prenom, string $nom, string $dateNaissance, Pays $nationalite)
@@ -63,14 +62,6 @@ class Joueur{
          return $this;
      }
  
-     public function getEquipes(){
-        return $this->_equipes = [];
-     }
-
-     public function setEquipes(Equipe $equipes){
-        $this->_equipes = $equipes;
-     }
-
      public function addEquipes(Equipe $equipes){
         return $equipes->getNomEquipe();
      }

@@ -2,17 +2,14 @@
 
 class Equipe{
     private string $_nomEquipe;
-    private string $_dateCreation;
-    private array $_joueurs;
+    private int $_dateCreation;
     private Pays $_pays;
     private array $_contrats = [];
 
-    public function __construct(string $nomEquipe, string $dateCreation, Pays $pays)
+    public function __construct(string $nomEquipe, int $dateCreation, Pays $pays)
     {
         $this->_nomEquipe = $nomEquipe;
         $this->_dateCreation = $dateCreation;
-        // $dateCreation = new DateTime();
-        $this->_joueurs = [];
         $this->_pays = $pays;
         $this->_pays->setEquipes($this);
     }
@@ -42,12 +39,6 @@ class Equipe{
         return $this;
     }
 
-    public function getJoueurs(){
-        return $this->_joueurs = [];
-    }
-    public function setJoueurs(array $joueurs){
-        $this->_joueurs = $joueurs;
-    }
    public function addJoueur(Joueur $joueurs){
         return $joueurs->getPrenom()." " .$joueurs()->getNom();
    }
