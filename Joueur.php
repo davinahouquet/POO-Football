@@ -5,16 +5,14 @@ class Joueur{
     private string $_nom;
     private DateTime $_dateNaissance;
     private Pays $_nationalite;
-    private array $_equipes;
+    private array $_equipes = [];
     private array $_contrats = [];
 
     public function __construct(string $prenom, string $nom, string $dateNaissance, Pays $nationalite)
     {
         $this->_prenom = $prenom;
         $this->_nom = $nom;
-        $dateNaissance = new DateTime();
-        $this->_dateNaissance = $dateNaissance;
-        $this->_equipes = [];
+        $this->_dateNaissance = new DateTime($dateNaissance);
     }
 
      //Getters et setters 
@@ -69,12 +67,12 @@ class Joueur{
         return $this->_equipes = [];
      }
 
-     public function setEquipes(array $equipes){
+     public function setEquipes(Equipe $equipes){
         $this->_equipes = $equipes;
      }
 
      public function addEquipes(Equipe $equipes){
-        return $equipes->getNom();
+        return $equipes->getNomEquipe();
      }
      public function getContrats() : array{
         return $this->_contrats;
@@ -86,20 +84,21 @@ class Joueur{
     public function __toString(){
         return $this->_prenom . " " . $this->_nom;
     }
-     //Méthode pour calculer l'âge d'un joueur
 
+     //Méthode pour calculer l'âge d'un joueur
      public function getAgeJoueur(){
-        $aujourdhui=new DateTime();
-        $diff=$aujourdhui->diff($this->_dateNaissance);
+        $aujourdhui = new DateTime('2023-04-04');
+        $diff = $aujourdhui->diff($this->_dateNaissance);
         return $diff->format("%Y");
-}
+    }
 
     //Méthode pour lister toutes les équipes d'un joueur
-    // public function listerEquipesJoueur(){
-    //     $result = $this."<br>";
-    //     foreach($this->_equipes as $equipe){
-    //         $result .= 
-    //     }
-    // }
+    public function listerEquipesJoueur(){
+        $result = $this."<br>";
+        foreach($this->_contrats as $contrat){
+            $result .= " -".$contrat->getEquipe()." ".$contrat->getDateDebutSaison()."<br>";
+        }
+        return $result;
+    }
 }
 ?>

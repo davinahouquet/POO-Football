@@ -24,10 +24,10 @@ $fcb = new Equipe ('FC Barcelone', '1899', $espagne);
 $juv = new Equipe ('Juventus', '1897', $italie);
 $real = new Equipe ('Real Madrid', '1902', $espagne);
 //Instanciation Joueurs
-$mbappe = new Joueur('Killian', 'Mbappe', '20-12-1998', $france);
-$ronaldo = new Joueur ('Cristiano', 'Ronaldo', '05-02-1985', $portugal);
-$messi = new Joueur ('Lionel', 'Messi', '24-06-1987', $argentine);
-$neymar = new Joueur ('Neymar', 'Junior', '50-02-1992', $bresil);
+$mbappe = new Joueur('Killian', 'Mbappe', '1998-12-20', $france);
+$ronaldo = new Joueur ('Cristiano', 'Ronaldo', '1985-02-05', $portugal);
+$messi = new Joueur ('Lionel', 'Messi', '1987-06-24', $argentine);
+$neymar = new Joueur ('Neymar', 'Junior', '1992-02-05', $bresil);
 
 //Instanciation des contrats
 
@@ -40,7 +40,7 @@ $contratCRJuv = new Contrat($ronaldo, $juv, '2018');
 $contartCRReal = new Contrat($ronaldo, $real, '2009');
 
 //Test des fonctions
-
+echo "Lister les équipe d'un pays : <br><br>";
 echo $france->listerEquipePays();
 echo $espagne->listerEquipePays();
 echo $angleterre->listerEquipePays();
@@ -49,9 +49,16 @@ echo $bresil->listerEquipePays();
 echo $portugal->listerEquipePays();
 echo $argentine->listerEquipePays();
 
-echo $psg->listerContratsEquipe();
-echo $racing->listerContratsEquipe();
-echo $fcb->listerContratsEquipe();
-echo $juv->listerContratsEquipe();
+echo "Lister les joueurs d'une équipe : <br><br>";
+echo $psg->listerJoueursEquipe();
+echo $racing->listerJoueursEquipe();
+echo $fcb->listerJoueursEquipe();
+echo $juv->listerJoueursEquipe();
+
+echo "Lister les équipes d'un joueur : <br><br>";
+echo $mbappe->listerEquipesJoueur();
+echo $ronaldo->listerEquipesJoueur();
+echo $messi->listerEquipesJoueur();
+echo $neymar->listerEquipesJoueur();
 
 ?>

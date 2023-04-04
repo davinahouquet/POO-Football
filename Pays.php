@@ -49,7 +49,7 @@ public function __toString(){
     public function listerEquipePays(): string {
         $result = $this.":<br>";
         foreach($this->_equipes as $equipe){
-            $result .= "- ".$equipe->getNom()."<br>";
+            $result .= "- ".$equipe->getNomEquipe()."<br>";
         }
         return $result."<br>";
  
