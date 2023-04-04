@@ -5,6 +5,7 @@ class Equipe{
     private string $_dateCreation;
     private array $_joueurs;
     private Pays $_pays;
+    private array $_contrats = [];
 
     public function __construct(string $nom, string $dateCreation, Pays $pays)
     {
@@ -14,7 +15,6 @@ class Equipe{
         $this->_joueurs = [];
         $this->_pays = $pays;
         $this->_pays->setEquipes($this);
-        $this->_joueurs->setEquipes($this);
     }
 
      //Getters et setters 
@@ -59,17 +59,24 @@ class Equipe{
     $this->_pays = $pays;
    }
 
+   public function getContrats() : array{
+    return $this->_contrats;
+}
+public function setContrats(Contrat $contrat){
+    array_push($this->_contrats, $contrat);
+}
    public function __toString()
    {
     return $this->_nom;
    }
-    //Lister tous les joueurs d'une équipe (avec nom prénom âge)
-    // public function listerJoueurs():string{
-    //     $result = $this."<br>";
-    //     foreach($this->_joueurs as $joueur){
-    //         $result .= $joueur->getPrenom()." ".$joueur->getNom()." <br>";
-    //     }
-    //     return $result;
-    // }
+
+    //Afficher les contrats d'une équipe
+    public function listerContratsEquipe():string{
+        $result = $this."<br>";
+        foreach($this->_contrats as $contrat){
+            $result .= $contrat->getJoueur()." ".$contrat->getDateDebutSaison()." <br>";
+        }
+        return $result."<br>";
+    }
 }
 ?>

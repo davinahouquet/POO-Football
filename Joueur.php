@@ -3,18 +3,18 @@
 class Joueur{
     private string $_prenom;
     private string $_nom;
-    private string $_dateNaissance;
+    private DateTime $_dateNaissance;
     private Pays $_nationalite;
     private array $_equipes;
+    private array $_contrats = [];
 
     public function __construct(string $prenom, string $nom, string $dateNaissance, Pays $nationalite)
     {
         $this->_prenom = $prenom;
         $this->_nom = $nom;
+        $dateNaissance = new DateTime();
         $this->_dateNaissance = $dateNaissance;
-        // $dateNaissance = new DateTime();
         $this->_equipes = [];
-        $this->_equipes->addEquipes($this);
     }
 
      //Getters et setters 
@@ -68,6 +68,7 @@ class Joueur{
      public function getEquipes(){
         return $this->_equipes = [];
      }
+
      public function setEquipes(array $equipes){
         $this->_equipes = $equipes;
      }
@@ -75,14 +76,30 @@ class Joueur{
      public function addEquipes(Equipe $equipes){
         return $equipes->getNom();
      }
+     public function getContrats() : array{
+        return $this->_contrats;
+    }
+    public function setContrats(Contrat $contrat){
+        array_push($this->_contrats, $contrat);
+    }
 
+    public function __toString(){
+        return $this->_prenom . " " . $this->_nom;
+    }
      //Méthode pour calculer l'âge d'un joueur
 
-    //  public function getAgeJoueur(){
-    //     $aujourdhui=new DateTime();
-    //     $diff=$aujourdhui->diff($this->_dateNaissance);
-    //     return $diff->format("%Y");
-
+     public function getAgeJoueur(){
+        $aujourdhui=new DateTime();
+        $diff=$aujourdhui->diff($this->_dateNaissance);
+        return $diff->format("%Y");
 }
 
+    //Méthode pour lister toutes les équipes d'un joueur
+    // public function listerEquipesJoueur(){
+    //     $result = $this."<br>";
+    //     foreach($this->_equipes as $equipe){
+    //         $result .= 
+    //     }
+    // }
+}
 ?>

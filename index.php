@@ -49,9 +49,9 @@ echo $bresil->listerEquipePays();
 echo $portugal->listerEquipePays();
 echo $argentine->listerEquipePays();
 
-// echo $psg->listerJoueurs();
-// echo $racing->listerJoueurs();
-// echo $barca->listerJoueurs();
-// echo $Juventus->listerJoueurs();
+echo $psg->listerContratsEquipe();
+echo $racing->listerContratsEquipe();
+echo $fcb->listerContratsEquipe();
+echo $juv->listerContratsEquipe();
 
 ?>
