@@ -14,6 +14,7 @@ class Joueur{
         $this->_dateNaissance = $dateNaissance;
         // $dateNaissance = new DateTime();
         $this->_equipes = [];
+        $this->_equipes->addEquipes($this);
     }
 
      //Getters et setters 
@@ -71,4 +72,17 @@ class Joueur{
         $this->_equipes = $equipes;
      }
 
+     public function addEquipes(Equipe $equipes){
+        return $equipes->getNom();
+     }
+
+     //Méthode pour calculer l'âge d'un joueur
+
+    //  public function getAgeJoueur(){
+    //     $aujourdhui=new DateTime();
+    //     $diff=$aujourdhui->diff($this->_dateNaissance);
+    //     return $diff->format("%Y");
+
 }
+
+?>

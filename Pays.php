@@ -51,7 +51,7 @@ public function __toString(){
         foreach($this->_equipes as $equipe){
             $result .= "- ".$equipe->getNom()."<br>";
         }
-        return $result;
+        return $result."<br>";
  
 }
 }

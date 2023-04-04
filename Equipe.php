@@ -14,6 +14,7 @@ class Equipe{
         $this->_joueurs = [];
         $this->_pays = $pays;
         $this->_pays->setEquipes($this);
+        $this->_joueurs->setEquipes($this);
     }
 
      //Getters et setters 
@@ -58,5 +59,17 @@ class Equipe{
     $this->_pays = $pays;
    }
 
+   public function __toString()
+   {
+    return $this->_nom;
+   }
+    //Lister tous les joueurs d'une équipe (avec nom prénom âge)
+    // public function listerJoueurs():string{
+    //     $result = $this."<br>";
+    //     foreach($this->_joueurs as $joueur){
+    //         $result .= $joueur->getPrenom()." ".$joueur->getNom()." <br>";
+    //     }
+    //     return $result;
+    // }
 }
 ?>
