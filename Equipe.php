@@ -74,7 +74,7 @@ public function setContrats(Contrat $contrat){
     public function listerJoueursEquipe():string{
         $result = "<div class='container'><div class='uk-child-width-1-3@m uk-grid-small uk-grid-match' uk-grid><div><div id='equipe' class='uk-card uk-card-default uk-card-body'>".$this."<br>";
         foreach($this->_contrats as $contrat){
-            $result .= "-".$contrat->getJoueur()." ".$contrat->getJoueur()->getAgeJoueur()."<br>";
+            $result .= "-".$contrat->getJoueur()." ".$contrat->getJoueur()->getAgeJoueur()."ans<br>";
         }
         return $result."</div></div></div></div><br>";
     }
