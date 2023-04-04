@@ -20,9 +20,9 @@ $argentine = new Pays ('Argentine');
 //Instanciation Equipes
 $psg = new Equipe('PSG', '1970', $france);
 $racing = new Equipe('Racing Club Strasbourg', '1906', $france);
-$barca = new Equipe ('FC Barcelone', '1899', $espagne);
-$Juventus = new Equipe ('Juventus', '1897', $italie);
-
+$fcb = new Equipe ('FC Barcelone', '1899', $espagne);
+$juv = new Equipe ('Juventus', '1897', $italie);
+$real = new Equipe ('Real Madrid', '1902', $espagne);
 //Instanciation Joueurs
 $mbappe = new Joueur('Killian', 'Mbappe', '20-12-1998', $france);
 $ronaldo = new Joueur ('Cristiano', 'Ronaldo', '05-02-1985', $portugal);
@@ -31,7 +31,13 @@ $neymar = new Joueur ('Neymar', 'Junior', '50-02-1992', $bresil);
 
 //Instanciation des contrats
 
-
+$contratNeymarPSG = new Contrat($neymar, $psg, '2017');
+$contratNeymarFCB = new Contrat($neymar, $fcb, '2013');
+$contratMbappePSG = new Contrat($mbappe, $psg, '2017');
+$contratMessiPSG = new Contrat($messi, $psg, '2021');
+$contratMessiFCB = new Contrat($messi, $fcb, '2004');
+$contratCRJuv = new Contrat($ronaldo, $juv, '2018');
+$contartCRReal = new Contrat($ronaldo, $real, '2009');
 
 //Test des fonctions
 

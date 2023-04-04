@@ -5,7 +5,7 @@ class Contrat{
     private Equipe $_equipe;
     private DateTime $_dateDebutSaison;
 
-    public function __construct(Joueur $joueur, Equipe $equipe, DateTime $dateDebutSaison)
+    public function __construct(Joueur $joueur, Equipe $equipe, string $dateDebutSaison)
     {
         $this->_joueur = $joueur;
         $this->_equipe = $equipe;
