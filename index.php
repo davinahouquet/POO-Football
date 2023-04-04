@@ -29,6 +29,10 @@ $ronaldo = new Joueur ('Cristiano', 'Ronaldo', '05-02-1985', $portugal);
 $messi = new Joueur ('Lionel', 'Messi', '24-06-1987', $argentine);
 $neymar = new Joueur ('Neymar', 'Junior', '50-02-1992', $bresil);
 
+//Instanciation des contrats
+
+
+
 //Test des fonctions
 
 echo $france->listerEquipePays();
@@ -39,9 +43,9 @@ echo $bresil->listerEquipePays();
 echo $portugal->listerEquipePays();
 echo $argentine->listerEquipePays();
 
-echo $psg->listerJoueurs();
-echo $racing->listerJoueurs();
-echo $barca->listerJoueurs();
-echo $Juventus->listerJoueurs();
+// echo $psg->listerJoueurs();
+// echo $racing->listerJoueurs();
+// echo $barca->listerJoueurs();
+// echo $Juventus->listerJoueurs();
 
 ?>
